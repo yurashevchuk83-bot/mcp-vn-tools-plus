@@ -24,13 +24,15 @@ def time_now() -> str:
 @mcp.tool()
 def play_radio(station_name: str) -> str:
     """Вмикає радіостанцію за назвою. Наразі підтримується лише Хіт FM."""
+    logging.warning(f"ВИКЛИК play_radio! Отримано: {station_name}")
+
     stations = {
         "хіт фм": "http://online.hitfm.ua/HitFM",
         "hit fm": "http://online.hitfm.ua/HitFM"
     }
-    
+
     name_lower = station_name.strip().lower()
-    
+
     if name_lower in stations:
         url = stations[name_lower]
         return f"Відтворюю радіостанцію Хіт FM за посиланням: {url}"

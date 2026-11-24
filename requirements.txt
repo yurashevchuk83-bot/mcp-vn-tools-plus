@@ -1,12 +1,12 @@
 # MCP + server + websockets (bắt buộc cho fastmcp)
-mcp[server,websockets]==1.1.1
+mcp>=1.0.0,<2.0.0
 
 # Các lib tiện ích bạn đang dùng (RSS, requests…):
 feedparser==6.0.11
 requests==2.32.3
 python-dateutil==2.9.0.post0
 yt-dlp==2024.10.7
-fastmcp>=2.0.0
+
 uvicorn
 # Không cần FastAPI/Starlette nếu bạn chỉ chạy server STDIO.
 # Không cần sse-starlette (gây xung đột phiên bản).
